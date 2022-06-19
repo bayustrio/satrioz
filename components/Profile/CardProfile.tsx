@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import toast from "react-hot-toast";
 import { IInfoDataUser, IUpdateProfile } from "../../Types/User-type";
 import { postDataAPI } from "../../utils/FetchData";
 import { checkImage, uploadImage } from "../../utils/ImageUpload";
@@ -13,7 +12,7 @@ const CardProfile = ({ data }: { data: IInfoDataUser | undefined }) => {
     e.preventDefault();
     try {
       const check = checkImage(image);
-      if (check) return toast.error(check);
+      if (check) return alert(check);
 
       const url = await uploadImage(image);
       if (url !== "") {
