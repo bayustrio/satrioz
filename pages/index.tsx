@@ -23,7 +23,7 @@ const Home: NextPage<IProps> = ({ data }) => {
     </>
   );
 };
-
+// check
 export const getServerSideProps = async () => {
   const res = await getDataProfile("story/getAllStories");
   const title = res.data.title;
