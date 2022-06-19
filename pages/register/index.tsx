@@ -3,7 +3,6 @@ import { rootContext } from "../../Context/ContextStore";
 import Layout from "../../layout/Layout";
 import { HANDLE_CHANGE_REGISTER } from "../../Types/Auth-type";
 import { postDataAPI } from "../../utils/FetchData";
-import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const { state, dispatch } = useContext(rootContext);
@@ -23,10 +22,10 @@ const Register = () => {
       try {
         const res = await postDataAPI("auth/register", Data);
         console.log(res);
-        toast.success("Successfull Register Users");
+        // success("Successfull Register Users");
       } catch (err: any) {
         console.log(err);
-        toast.error(err.response.data.error);
+        // toast.error(err.response.data.error);
       }
     }
   };
@@ -52,7 +51,6 @@ const Register = () => {
 
   return (
     <>
-      <Toaster />
       <div className="w-full min-h-screen flex items-center xl:px-10 p-2 lg:px-10 md:px-7 sm:px-7 dark:bg-bgDark bg-yellowLight">
         <div className="flex items-center justify-center w-full">
           <div className="xl:w-[40%] dark:bg-blackCard min-h-[25vh] bg-yellowNav p-2 flex flex-col gap-3 lg:w-[40%] w-full md:w-[45%]">
