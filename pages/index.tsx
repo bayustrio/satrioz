@@ -4,14 +4,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 import "react-markdown-editor-lite/lib/index.css";
-// import MdEditor from 'react-markdown-editor-lite';
-// import style manually
+import MarkdownIt from "markdown-it";
 import "react-markdown-editor-lite/lib/index.css";
 import { HtmlType } from "react-markdown-editor-lite/cjs/editor/preview";
 const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
   ssr: false,
 });
 const Home: NextPage = () => {
+  const mdParser = new MarkdownIt();
   return (
     <div className={styles.container}>
       <Head>
@@ -26,11 +26,7 @@ const Home: NextPage = () => {
         </h1>
         <MdEditor
           style={{ height: "500px" }}
-          renderHTML={function (
-            text: string
-          ): HtmlType | Promise<HtmlType> | (() => HtmlType) {
-            throw new Error("Function not implemented.");
-          }} // renderHTML={/* Render function */}
+          renderHTML={(text) => mdParser.render(text)} // renderHTML={/* Render function */}
         />
         ;
         <p className={styles.description}>
