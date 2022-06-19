@@ -4,7 +4,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
 import "react-markdown-editor-lite/lib/index.css";
-
+// import MdEditor from 'react-markdown-editor-lite';
+// import style manually
+import "react-markdown-editor-lite/lib/index.css";
+import { HtmlType } from "react-markdown-editor-lite/cjs/editor/preview";
 const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
   ssr: false,
 });
@@ -23,7 +26,11 @@ const Home: NextPage = () => {
         </h1>
         <MdEditor
           style={{ height: "500px" }}
-          // renderHTML={/* Render function */}
+          renderHTML={function (
+            text: string
+          ): HtmlType | Promise<HtmlType> | (() => HtmlType) {
+            throw new Error("Function not implemented.");
+          }} // renderHTML={/* Render function */}
         />
         ;
         <p className={styles.description}>
