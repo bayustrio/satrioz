@@ -17,7 +17,8 @@ const Home: NextPage<IProps> = ({ data }) => {
     <>
       {/* <Layout> */}
       <div className="w-full min-h-screen xl:px-10 p-2 lg:px-10 md:px-7 sm:px-7 dark:bg-bgDark bg-yellowLight">
-        <CardStory data={data} />
+        {/* <CardStory data={data} /> */}
+        <h1>Testing</h1>
       </div>
       {/* </Layout> */}
     </>
