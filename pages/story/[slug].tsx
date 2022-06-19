@@ -4,12 +4,12 @@ import { rootContext } from "../../Context/ContextStore";
 import { getDataProfile, postDataAPI } from "../../utils/FetchData";
 import { useRouter } from "next/router";
 import { IDataStory } from "../../Types/Story-type";
-import DetailStory from "../../components/Story/DetailStory";
-import { Prism } from "react-syntax-highlighter";
-import { dracula as dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import DetailStory from "../../components/Story/DetailStory";
+// import { Prism } from "react-syntax-highlighter";
+// import { dracula as dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { NextSeo } from "next-seo";
-import "prismjs/themes/prism-tomorrow.css";
-import ReactMarkdown from "react-markdown";
+// import "prismjs/themes/prism-tomorrow.css";
+// import ReactMarkdown from "react-markdown";
 interface IProps {
   data: IDataStory;
 }
