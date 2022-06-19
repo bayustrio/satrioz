@@ -18,22 +18,22 @@ const Home: NextPage<IProps> = ({ data }) => {
       {/* <Layout> */}
       <div className="w-full min-h-screen xl:px-10 p-2 lg:px-10 md:px-7 sm:px-7 dark:bg-bgDark bg-yellowLight">
         {/* <CardStory data={data} /> */}
-        <h1>Testing</h1>
+        <h1>Hello World</h1>
       </div>
       {/* </Layout> */}
     </>
   );
 };
 // check
-export const getServerSideProps = async () => {
-  const res = await getDataProfile("story/getAllStories");
-  const title = res.data.title;
-  // const title = res.data.title
-  return {
-    props: {
-      data: res.data,
-    },
-  };
-};
+// export const getServerSideProps = async () => {
+//   const res = await getDataProfile("story/getAllStories");
+//   const title = res.data.title;
+//   // const title = res.data.title
+//   return {
+//     props: {
+//       data: res.data,
+//     },
+//   };
+// };
 
 export default Home;
