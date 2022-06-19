@@ -25,15 +25,15 @@ const Home: NextPage<IProps> = ({ data }) => {
   );
 };
 // check
-export const getInitialProps = async () => {
-  const res = await getDataProfile("story/getAllStories");
-  const title = res.data.title;
-  // const title = res.data.title
-  return {
-    props: {
-      data: res.data,
-    },
-  };
-};
+// export const getInitialProps = async () => {
+//   const res = await getDataProfile("story/getAllStories");
+//   const title = res.data.title;
+//   // const title = res.data.title
+//   return {
+//     props: {
+//       data: res.data,
+//     },
+//   };
+// };
 
 export default Home;
