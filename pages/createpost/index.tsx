@@ -3,7 +3,6 @@ import Link from "next/link";
 import Editor from "../../components/Markdown/Editor";
 import { ICreateStory, IStory } from "../../Types/Story-type";
 import { checkImage, uploadImage } from "../../utils/ImageUpload";
-import toast from "react-hot-toast";
 import { postDataAPI } from "../../utils/FetchData";
 const CreatePost = () => {
   const handleChange = () => {};
@@ -22,7 +21,7 @@ const CreatePost = () => {
     try {
       setLoading(true);
       const check = checkImage(image);
-      if (check) return toast.error(check);
+      if (check) return alert(check);
       const url = await uploadImage(image);
       //   const file = url;
       //   console.log(url);
