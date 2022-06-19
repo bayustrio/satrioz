@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
-    
   },
   "dependencies": {
+    "@types/prismjs": "^1.26.0",
     "@types/react-syntax-highlighter": "^15.5.2",
     "axios": "^0.27.2",
     "markdown-it": "^13.0.1",

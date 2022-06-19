@@ -1,27 +1,29 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { useEffect } from "react";
 import CardStory from "../components/Story/CardStory";
 import Layout from "../layout/Layout";
 import styles from "../styles/Home.module.css";
 import { getDataProfile } from "../utils/FetchData";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { IFullDataStory } from "../Types/Story-type";
-
+import Prism from "prismjs";
+import ReactMarkdown from "react-markdown";
+import "prismjs/components/prism-css";
 interface IProps {
   data: IFullDataStory;
 }
 const Home: NextPage<IProps> = ({ data }) => {
-  // console.log(data, "< getServerSide");
+  const markdownContent = ` 
+  # Heti
+  ## Heti is a simple blog system
+  ## Heti is a simple blog system`;
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   return (
-    <>
-      {/* <Layout> */}
-      <div className="w-full min-h-screen xl:px-10 p-2 lg:px-10 md:px-7 sm:px-7 dark:bg-bgDark bg-yellowLight">
-        {/* <CardStory data={data} /> */}
-        <h1>Hello World</h1>
-      </div>
-      {/* </Layout> */}
-    </>
+    <div>
+      <ReactMarkdown children={markdownContent} />
+    </div>
   );
 };
 // check
