@@ -38,10 +38,10 @@ const CardProfile = ({ data }: { data: IInfoDataUser | undefined }) => {
     <>
       <div className="p-2 w-[50%] h-[50vh] bg-yellowNav dark:bg-blackLight">
         <div className="flex w-full flex-col justify-center">
-          <img
+          {/* <img
             className="xl:w-40 xl:h-40 lg:w-40 lg:h-40  rounded-full"
             src={`${data?.photo}`}
-          />
+          /> */}
           <div className="">
             <label className=" mx-auto w-[50%] lg:w-[40%] mt-3 h-[7vh] dark:text-white flex justify-center items-center dark:bg-BgInput dark:border-gray-500  bg-white text-blue rounded-lg shadow-lg border border-blue cursor-pointer hover:bg-blue-400 hover:text-white">
               <div>

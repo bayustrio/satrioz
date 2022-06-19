@@ -14,7 +14,7 @@ const CardStory = ({ data }: { data: IFullDataStory }) => {
             className="w-[25%] hover:shadow-lg overflow-hidden rounded-lg h-[40vh] bg-yellowNav dark:bg-blackCard"
           >
             <div className="w-full overflow-hidden h-[25vh] bg-red-500 ">
-              <img src={item.image} className="object-cover w-full" />
+              {/* <img src={item.image} className="object-cover w-full" /> */}
             </div>
             <div className="p-2">
               <div className="pb-2">
